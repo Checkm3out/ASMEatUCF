@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+
+
+
+    {% load static %}
+    <link href="{% static 'printrequest/css/style.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+
+
+{% block body %}
+
+
+<body class="" style="min-height: 100%; position: relative; height: auto !important; padding-bottom: 45px !important;">
+
+
+
+
+
+<!-- begin asme copy paste -->
+
+
+<div class="wrapper">
+
+	<h2 class="wsite-content-title" data-sr-id="2"
+	style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
+	<strong><font color="#dab844">3D Printer</font></strong></h2>
+
+<div class="paragraph" data-sr-id="3" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
+	Prices • Print Request form</div>
+
+
+
+	<div class="jumbotron">
+<div style="width: 100%">
+
+	<div class="paragraph" ><font color="#2a2a2a"><strong><font size="6">3D PRINTER<br>​</font></strong><br>
+		<font size="3">We have a </font><em>DeltaMaker</em><font size="3">
+			, which uses PLA plastic.</font><span> </span><font size="3">
+			All money collected will go towards buying more filament and upgrades for  the printer. </font><span>
+			<font size="3">If you want to print something, fill out and submit the form below.</font></span><br><br>
+		Some examples of our prints:</font><ul><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:308335">T-Rex Skull</a>
+		  $18</font></li><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:257911">Elephant</a>
+		      $4</font></li><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:607518">Octopus Phone Stand</a>
+		  $3</font></li></ul>
+	</div>
+
+<div class="paragraph" style="text-align:justify;">
+	<font color="#2a2a2a"><font size="3">Pricing is based on print time and printing material:
+		<strong>$0.10 per gram of material + $1.00 per hour of print time</strong>. <br><u>
+			<em>(Price for non members is $0.20 per gram of material + $1.00 per hour of print time.)</em></u>
+	</font><br>
+		<span>We keep white and black filament in stock. For other colors please ask. If there is enough interest, we will purchase a new color.
+			We also offer a glow-in-the-dark filament that costs <strong>$0.20  per gram</strong>.</span>
+		<br><br><font size="3">For self-designed models, we encourage you to come to our office (EGN 1 Room 140) to consult our printing team to optimize your part for printing.
+			Although 3D printing allows for advanced manufacturing, it does have its limitations.</font><br><br>
+		Model your own with Solidworks <a href="http://my.cecs.ucf.edu/" target="_blank">(Instructions)</a> or
+		<a href="http://www.autodesk.com/education/free-software/inventor-professional" target="_blank">Autodesk Inventor</a>.
+		Both are free for students<br>Additional examples can be found online at <a href="http://www.thingiverse.com/" target="_blank">Thingiverse</a> or
+		<a href="https://www.youmagine.com/" target="_blank">Youmagine</a><br></font><br>
+</div>
+</div>
+			</div>
+
+	<!-- end copy pasta from asme -->
+
+
+	<div class="jumbotron">
+
+		<h4>ASME UCF 3D Printer Request</h4>
+		<div class="container">
+
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+
+				<label>First Name: </label>
+				<input type="text" name="first_name"> <br>
+
+				<label>Last Name: </label>
+				<input type="text" name="last_name"> <br>
+
+				<label>Phone Number: </label>
+				<input type="text" name="phone_number"> <br>
+
+				<label>email: </label>
+				<input type="email" name="email"> <br>
+
+				<label>Are you a ASME Member?: </label>
+				<input type="text" name="member"><br>
+
+				<label>Model Name: </label>
+				<input type="text" name="model_name"><br>
+
+				<label>Did you design it?: </label>
+				<input type="text" name="creator"><br>
+				<label>What are the dimensions?: </label>
+				<input type="text" name="dimensions"><br>
+				<label>What color filament?: </label>
+				<input type="text" name="color"><br>
+				<label>Special Requests?: </label>
+				<input type="text" name="special_requests"><br>
+				<label>What is it for?: </label>
+				<input type="text" name="message"><br>
+
+
+				<p>STL files</p>
+			<input type="file" name="document">
+				<button type="submit" >submit</button>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+
+{% endblock %}

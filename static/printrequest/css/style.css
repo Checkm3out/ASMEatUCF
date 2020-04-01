@@ -1,0 +1,83 @@
+body{
+
+
+    background: #222121;
+    color: #666666;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+
+
+    padding-top: 100px;
+}
+
+h1{
+    color: white;
+}
+a{
+    color: #ffc800;
+}
+li
+{
+    color: gray;
+}
+.jumbotron{
+    color: #a1a1a1;
+}
+.wrapper{
+
+}
+
+.header{
+    background-color: #333333;
+
+    color: white;
+    padding: 1.5rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: .3rem;
+
+    text-align: center;
+}
+
+.submitmovie_header_text{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-style: bold;
+}
+
+.header_text{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.info_text{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.margin_y{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.submit_button{
+    font-weight: bold;
+    color: #6DDCBD;
+
+    text-decoration: underline;
+}
+
+.forms-group{
+    margin-bottom: 1rem;
+}
+
+.input-box{
+    padding-left: 20%;
+    padding-right: 20%;
+}

@@ -25,14 +25,13 @@
 
 
 <div class="wrapper">
-
-	<h2 class="wsite-content-title" data-sr-id="2"
-	style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
+<div class="image">
+	<h2 class="center">
 	<strong><font color="#dab844">3D Printer</font></strong></h2>
 
-<div class="paragraph" data-sr-id="3" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
+<div class="center" data-sr-id="3" style="color:white;">
 	Prices • Print Request form</div>
-
+</div>
 
 
 	<div class="jumbotron">
@@ -43,7 +42,7 @@
 			, which uses PLA plastic.</font><span> </span><font size="3">
 			All money collected will go towards buying more filament and upgrades for  the printer. </font><span>
 			<font size="3">If you want to print something, fill out and submit the form below.</font></span><br><br>
-		Some examples of our prints:</font><ul><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:308335">T-Rex Skull</a>
+		Some examples of our prints:</font><ul class="list"><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:308335">T-Rex Skull</a>
 		  $18</font></li><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:257911">Elephant</a>
 		      $4</font></li><li><font color="#2a2a2a"><a target="_blank" href="http://www.thingiverse.com/thing:607518">Octopus Phone Stand</a>
 		  $3</font></li></ul>
@@ -73,9 +72,10 @@
 
 		<h4>ASME UCF 3D Printer Request</h4>
 		<div class="container">
-
+			{{ form.as_p }}
 			<form method="POST" enctype="multipart/form-data">
 				{% csrf_token %}
+
 
 				<label>First Name: </label>
 				<input type="text" name="first_name"> <br>
@@ -107,7 +107,7 @@
 				<input type="text" name="message"><br>
 
 
-				<p>STL files</p>
+				<p class="paragraph">STL files</p>
 			<input type="file" name="document">
 				<button type="submit" >submit</button>
 			</form>

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 
 from .forms import EmailForm
+from .models import PrinterFile
 
 import mimetypes
 
@@ -12,11 +13,22 @@ from django.core.mail import send_mail, EmailMessage
 # Create your views here.
 
 
+def asme(request):
+    args = {'name': "form"}
+    return render(request, 'printrequest/asme.html', args)
+
+
+def about(request):
+    args = {'name': "FORM"}
+    return render(request, 'printerrequest/about.html', args)
+
+
 def home(request):
     if request.method == 'POST':
         form = EmailForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+
             print("file saved")
             print(request.FILES.get('printerfile'))
         # email = request.POST.get('email')
@@ -26,10 +38,10 @@ def home(request):
                 if key == "csrfmiddlewaretoken":
                     print("--skip--")
                 else:
-                    message = message + key + ": "+ value + "\n"
+                    message = message + key + ": " + value + "\n"
             print(message)
             #message = request.POST.dict()
-            document = request.FILES.get('document')
+            document = form.cleaned_data['document'].name
             email_from = settings.EMAIL_HOST_USER
             recipient_list = ("wofw11@yahoo.com",)
             email = EmailMessage(subject, message, email_from, recipient_list)
@@ -41,6 +53,8 @@ def home(request):
             print("file sent")
             os.remove(base_dir + str(document))
             print("file deleted")
+            obj = PrinterFile.objects.all()
+            obj.delete()
         else:
             print("form invalid")
         return redirect('/asme/home/')

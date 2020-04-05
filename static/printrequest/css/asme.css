@@ -1,0 +1,205 @@
+.wrapperbody{
+    display: flex;
+    flex-direction: row;
+
+    margin: auto;
+
+
+    margin-top: 20px;
+    align-self: center;
+    justify-content: space-evenly;
+    max-width: 1200px;
+}
+
+.wrapper{
+    display: block;
+    max-width: available;
+}
+
+.jumbotron{
+    background-color: #dab844;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+
+}
+
+.jumbotron-alt{
+    background-color: #515151;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+
+}
+
+a{
+    margin: 5px;
+}
+
+.social-item-inner{
+	padding: 10px;
+
+}
+@media (min-width: 1000px) {
+    .flex{
+        padding: 30px;
+
+
+}
+    .order{
+
+        display: inline-flex;
+        flex-direction: column;
+        flex-basis: 20%;
+
+
+    }
+    .shrink{
+        flex: 1 0 35%;
+    }
+    .shrink2{
+        flex: -moz-min-content;
+    }
+
+    .new{
+        display: flex;
+        flex-direction: column;
+
+        flex-basis: 20%;
+
+    }
+}
+.flex{
+    display: flex;
+
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+
+}
+.flex-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0px;
+
+
+
+
+}
+
+.width70p{
+    width: 70%;
+}
+
+.width50p{
+    width: 50%;
+}
+
+.width30p{
+    width: 35%;
+}
+
+.paddingright{
+    padding-right: 100px;
+}
+
+@media (max-width: 675px) {
+
+    .flex{
+        flex-wrap: wrap;
+        justify-content: center;
+}
+    .flex-2{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        align-self: center;
+        justify-self: center;
+        justify-items: unset;
+
+}
+    .wrapperbody{
+        justify-self: center;
+        justify-content: flex-start !important;
+        align-content: center;
+        align-items: center;
+        margin: 0px;
+        margin-top: 20px;
+    }
+}
+
+
+.content-color-box-wrapper{
+    background-color: #292a29;
+    margin-top: 10px;
+    color: #dab844;
+}
+.paragraph{
+    color: #dab844;
+    margin: 10px;
+
+}
+
+/*image carousel*/
+.carousel {
+	width: auto;
+
+	height: 250px;
+
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.slides {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	display: flex;
+	width: 100%;
+	transition: 1s ease-in-out;
+}
+.slide {
+	min-width: 100%;
+	min-height: 250px;
+	height: auto;
+}
+
+
+@media (min-width: 1000px) {
+    .cjumbo{
+
+    }
+    .carousel {
+        width: auto;
+        height: 400px;
+
+
+
+        /*max-width: 400px;*/
+        border-radius: 3px;
+        overflow: hidden;
+        position: center;
+
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+#tours .content-color-box-wrapper {
+  padding: 20px;
+  border-radius: 0px;
+  background-color: #dab844;
+  border-style: None;
+  border-color: #555555;
+  border-width: 3px;
+}

@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import PrinterFile, Colors
+
+admin.site.register(PrinterFile)
+admin.site.register(Colors)
+# admin.site.register(RoleModel)
+# admin.site.register(OfficerModel)

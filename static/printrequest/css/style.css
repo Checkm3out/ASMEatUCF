@@ -139,3 +139,7 @@ input{
     outline: #6DDCBD solid 1px;
 
 }
+/*idk why but this page requires modifaction*/
+.links{
+    height: 100%;
+}

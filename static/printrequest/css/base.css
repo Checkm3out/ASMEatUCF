@@ -163,6 +163,16 @@ body {
 }
 
 
+
+
+
+.social-item-inner{
+
+	padding-right: 11px;
+	padding-left: 12px;
+	padding-bottom: 14px;
+
+}
 /* https://www.iconfinder.com/iconsets/social-media-black-white-2 */
 a.facebook{
 	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjEwMCUiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik01MTIsMjU3LjU1NWMwLC0xNDEuMzg1IC0xMTQuNjE1LC0yNTYgLTI1NiwtMjU2Yy0xNDEuMzg1LDAgLTI1NiwxMTQuNjE1IC0yNTYsMjU2YzAsMTI3Ljc3NyA5My42MTYsMjMzLjY4NSAyMTYsMjUyLjg5bDAsLTE3OC44OWwtNjUsMGwwLC03NGw2NSwwbDAsLTU2LjRjMCwtNjQuMTYgMzguMjE5LC05OS42IDk2LjY5NSwtOTkuNmMyOC4wMDksMCA1Ny4zMDUsNSA1Ny4zMDUsNWwwLDYzbC0zMi4yODEsMGMtMzEuODAxLDAgLTQxLjcxOSwxOS43MzMgLTQxLjcxOSwzOS45NzhsMCw0OC4wMjJsNzEsMGwtMTEuMzUsNzRsLTU5LjY1LDBsMCwxNzguODljMTIyLjM4NSwtMTkuMjA1IDIxNiwtMTI1LjExMyAyMTYsLTI1Mi44OVoiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz48L3N2Zz4=');
@@ -200,3 +210,42 @@ a.email{
 }
 
 /*end social network icons*/
+
+.social{
+    margin: 5px;
+	min-height: 20px;
+	min-width: 20px;
+	padding-bottom:3.5px ;
+}
+
+.footer-jumbotron{
+    display: flex;
+    background: #b98a04;
+    width: auto;
+    line-height: 2;
+    border-radius: 22px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #b98a04;
+    border: solid black 4px;
+
+}
+
+@media (max-width: 650px) {
+
+
+    .footer-jumbotron{
+        width: 100%;
+        border-radius: 0px !important;
+        border-left: 0px !important;
+        border-right: 0px !important;
+        border-bottom: 0px !important;
+        height: 0px !important;
+		padding: 25px !important;
+        position: -webkit-sticky;
+
+    }
+
+}

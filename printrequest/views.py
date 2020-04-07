@@ -1,8 +1,14 @@
+# The views are what controls html template responses and the variables inside of them
+
+# import here
 from django.shortcuts import render, redirect
 from django.conf import settings
 
+# import the forms for the models
 from .forms import EmailForm
-from .models import PrinterFile
+
+# import the models we created
+from .models import PrinterFile, Colors, OfficerModel, AboutModel
 
 import mimetypes
 
@@ -12,18 +18,19 @@ from django.core.mail import send_mail, EmailMessage
 
 # Create your views here.
 
-
+# site/asme/  'home page'
 def asme(request):
     args = {'name': "form"}
     return render(request, 'printrequest/asme.html', args)
 
 
 def about(request):
-    args = {'name': "FORM"}
+    args = {'about': AboutModel.objects.all(), 'name': OfficerModel.objects.all()}
+    print(args)
     return render(request, 'printrequest/about.html', args)
 
 
-def home(request):
+def printer_request_form(request):
     if request.method == 'POST':
         form = EmailForm(request.POST, request.FILES)
         if form.is_valid():

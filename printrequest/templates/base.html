@@ -32,9 +32,9 @@
 				<div class="close-btn"><i class="fas fa-times">X</i></div>
 				<ul class="links">
 					<li><a href="/asme/">Home</a></li>
-					<li><a href="/about/">About</a></li>
+					<li><a href="/asme/about/">About</a></li>
 					<li><a href="#">Projects</a></li>
-					<li><a href="/asme/home/">3D Printer</a></li>
+					<li><a href="/asme/3D-Printer/">3D Printer</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>
@@ -46,12 +46,12 @@
   {% endblock %}
 
 </head>
-<body>
+
 
     {% block body %}
+<body>
 
-
-
+ </body>
 
 
 
@@ -61,8 +61,35 @@
 
 
 
+
+
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
 <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
-  </body>
+
+
+    {% block footer %}
+    <footer>
+        <div class="footer-jumbotron">
+    <div style="text-align:center;">
+<span class="">
+    <a class="social facebook" href="https://www.facebook.com/ASME.UCF/" target="_blank" alt="Facebook">
+        <span class="social-item-inner"></span></a>
+    <a class="social twitter" href="https://twitter.com/ucfasme" target="_blank" alt="Twitter">
+        <span class="social-item-inner"></span></a>
+    <a class="social instagram" href="https://www.instagram.com/ucfasme/" target="_blank" alt="Instagram">
+        <span class="social-item-inner"></span></a>
+    <a class="social email" href="mailto:ucfasme@gmail.com" target="_blank" alt="Mail">
+        <span class="social-item-inner"></span></a>
+    <a class="social slack" href="https://asmeatucf.slack.com/" target="_blank" alt="Slack">
+        <span class="social-item-inner"></span></a></span>
+</div>
+
+
+</div>
+    </div>
+
+</footer>
+    {% endblock %}
+
 </html>

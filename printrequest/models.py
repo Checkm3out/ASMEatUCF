@@ -9,6 +9,30 @@ class Colors(models.Model):
     def __str__(self):
         return (self.name + " " + self.price)
 
+
+class OfficerTitleModel(models.Model):
+    asme_title = models.CharField(max_length=30, default='', blank=True)
+
+    def __str__(self):
+        return (self.asme_title)
+
+
+class OfficerModel(models.Model):
+    name = models.CharField(max_length=30, default='', blank=True)
+    title = models.ForeignKey(OfficerTitleModel, on_delete=models.SET_NULL, null=True)
+    description = models.TextField(max_length=3000, default='', blank=True)
+
+    def __str__(self):
+        return (self.name)
+
+
+class AboutModel(models.Model):
+    heading = models.CharField(max_length=30, default='', blank=True)
+    body = models.TextField(max_length=3000, default='', blank=True)
+
+    def __str__(self):
+        return (self.heading)
+
 #
 # class RoleModel(models.Model):
 #     name = models.CharField(max_length=30, default='', blank=True)

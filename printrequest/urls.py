@@ -5,7 +5,7 @@ from . import views
 app_name = "asme"
 urlpatterns = [
 
-    path('home/', views.home),
+    path('3D-Printer/', views.printer_request_form),
     path('', views.asme),
     path('about/', views.about),
 ]

@@ -2,8 +2,52 @@
 
 {% block head %}
 {% load static %}
-    <link href="{% static 'printrequest/css/asme.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'printrequest/css/about.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block body %}
+<!--an example of how the page dynamically loads profiles-->
+<!--<div class="container-body">-->
+<!--    {% for item in name%}-->
+<!--    <li>-->
+<!--        {{ item.name }}-->
+<!--        {{ item.price }}-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+<body class="wsite-background">
+<div class="container-body">
+
+    {% for thing in about %}
+    <div class="header-jumbotron">
+    <h1>{{thing}}</h1>
+        <p>{{ thing.body }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container-body">
+
+{% for item in name %}
+    <div class="container">
+        <div class="profile-jumbotron">
+        <!--This is where the profile pic gets loaded in- by CSS -->
+        <p class="profile-pic"></p>
+            <p class="officer-name"> {{ item.name }} </p>
+        <p class="officer-title" >{{ item.title }}</p>
+        <p class="officer-description">
+            ​ {{ item.description }} / Abhi is the President of ASME. He is a creator who wants to understand the mechanisms we inhabit who sees opportunity to impact the people around him through business. A hopeful future actor or comedian. An undergrad Aerospace Engineer student, with minors in Entrepreneurship and Professional Selling. He is also a current business venture owner.
+        </p>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+</div>
+
+
+
+
+</body>
 {% endblock %}

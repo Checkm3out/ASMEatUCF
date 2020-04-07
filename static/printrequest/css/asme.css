@@ -42,10 +42,7 @@ a{
     margin: 5px;
 }
 
-.social-item-inner{
-	padding: 10px;
 
-}
 @media (min-width: 1000px) {
     .flex{
         padding: 30px;

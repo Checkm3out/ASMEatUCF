@@ -20,7 +20,7 @@ def asme(request):
 
 def about(request):
     args = {'name': "FORM"}
-    return render(request, 'printerrequest/about.html', args)
+    return render(request, 'printrequest/about.html', args)
 
 
 def home(request):

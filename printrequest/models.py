@@ -62,4 +62,26 @@ class PrinterFile(models.Model):
 #     description = models.CharField(max_length=1000, default='')
 
 
+from django.utils.translation import gettext_lazy as _
 
+from content_editor.models import Region, create_plugin_base
+
+from feincms3 import plugins
+from feincms3.pages import AbstractPage
+
+
+class Page(AbstractPage):
+    regions = [
+        Region(key="main", title=_("Main")),
+    ]
+
+
+PagePlugin = create_plugin_base(Page)
+
+
+class RichText(plugins.richtext.RichText, PagePlugin):
+    pass
+
+
+class Image(plugins.image.Image, PagePlugin):
+    caption = models.CharField(_("caption"), max_length=200, blank=True)

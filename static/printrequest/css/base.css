@@ -142,7 +142,10 @@ body {
 		justify-content: center;
 	}
 }
-
+	.asmelogo{
+		max-height: 66px !important;
+		height: 40px !important;
+	}
 
 /* Website background image */
 

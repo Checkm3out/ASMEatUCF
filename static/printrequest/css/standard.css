@@ -1,0 +1,48 @@
+.container-body {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+}
+
+
+.jumbotron{
+    background-color: #dab844;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: solid 4px black;
+    display: inline-flex;
+    flex-direction: column;
+    flex-basis: auto;
+    width: -moz-fit-content;
+
+
+
+
+
+}
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.hidden{
+    display: none;
+}
+
+/*idk why but this page requires modifaction*/
+.links{
+    height: 100%;
+}

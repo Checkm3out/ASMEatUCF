@@ -71,3 +71,32 @@ def printer_request_form(request):
         args = {'form': form}
         return render(request, 'printrequest/home.html', args)
 
+
+
+from django.shortcuts import get_object_or_404, render
+from feincms3.regions import Regions
+
+from .models import Page
+from .renderer import renderer
+
+
+def page_detail(request, path=None):
+    if request.POST:
+        print("post")
+    else:
+        print("at page detail")
+        page = get_object_or_404(
+            Page.objects.active(),
+            path="/{}/".format(path) if path else "/",
+        )
+        print(page)
+        return render(
+            request,
+            "printrequest/standard.html",
+            {
+                "page": page,
+                "regions": Regions.from_item(
+                    page, renderer=renderer, timeout=60
+                ),
+            },
+        )

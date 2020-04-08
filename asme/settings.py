@@ -42,7 +42,28 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'printrequest',
     'phone_field',
+    'feincms3',
+    "content_editor",
+    "ckeditor",
+    "imagefield",
 ]
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "toolbar": "Custom",
+        "format_tags": "h1;h2;h3;p;pre",
+        "toolbar_Custom": [[
+            "Format", "RemoveFormat", "-",
+            "Bold", "Italic", "Subscript", "Superscript", "-",
+            "NumberedList", "BulletedList", "-",
+            "Anchor", "Link", "Unlink", "-",
+            "HorizontalRule", "SpecialChar", "-",
+            "Source",
+        ]],
+    },
+}
+CKEDITOR_CONFIGS["richtext-plugin"] = CKEDITOR_CONFIGS["default"]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

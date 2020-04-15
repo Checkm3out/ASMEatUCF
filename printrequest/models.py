@@ -62,4 +62,3 @@ class PrinterFile(models.Model):
 #     description = models.CharField(max_length=1000, default='')
 
 
-

@@ -31,21 +31,24 @@
 				<div class="backdrop"></div>
 				<div class="close-btn"><i class="fas fa-times">X</i></div>
 				<ul class="links">
-                    {% if nav_urls.exists %}
+
+                    {% if nav_urls %}
                     {% for item in nav_urls %}
-                    <li><a href="/asme{{ item.path }}"> {{item}} </a></li>
+                    {% if item.get_url %}
+                    {% if item.show_in_menus %}
+
+
+                    <li><a href="{{ item.get_url }}"> {{item}} </a></li>
+
+                    {% endif %}
+                    {% endif %}
                     {% endfor %}
                     {% endif %}
-                    {% if user.is_authenticated %}
-                    <li><a href="/cms">Edit Pages(Admin) |  </a></li>
 
+                    {% if user.is_superuser %}
+                    <li><a href="/cms">|Edit Pages(Admin)|  </a></li>
                     {% endif  %}
-                    {% if page1 %}
-                    <li><a href="">{{page1}}</a></li>
-                    {% endif %}
-                    {% if page %}
-                    <li><a href="{% pageurl page.get_parent %}">{{page.get_url}}</a></li>
-                    {% endif %}
+
 					<li><a href="/">Home</a></li>
 					<li><a href="/about/">About</a></li>
 					<li><a href="/sitemap.xml">Projects</a></li>

@@ -14,6 +14,12 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+.logo > img{
+	height: 40px;
+	margin-right: 10px;
+	min-width: 50px;
+}
 /* Desktop view */
 .navbar {
 	width: 100%;
@@ -35,6 +41,7 @@ body {
 .links {
 	display: flex;
 	list-style: none;
+
 }
 .links li {
 	margin-right: 24px;
@@ -107,8 +114,9 @@ body {
 	}
 	.links li {
 		margin-right: 0;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		font-size: 1.5em;
+
 	}
 	.close-btn {
 		position: absolute;
@@ -136,6 +144,8 @@ body {
 	.open .backdrop {
 		display: block;
 	}
+
+
 
 	.logo{
 		align-items: center;

@@ -1,19 +1,31 @@
-{% load wagtailcore_tags %}
-<html>
-    <head>
-        <title>{{ page.title }}</title>
-    </head>
-    <body>
+{% extends "base.html" %}
 
-    <a href="{% pageurl page.get_parent %}">{{page.get_parent}}</a>
+{% block head %}
+{% load static %}
+    <link href="{% static 'printrequest/css/standard.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% load wagtailcore_tags %}
+{% block body %}
+
+    <body class="wsite-background">
+
+
         <h1>{{ page.title }}</h1>
+        <div class="jumbotron">
         {{ page.intro|richtext }}
+            </div>
+
         {% if form.as_p %}
+        <div class="jumbotron">
         <form action="{% pageurl page %}" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit">
         </form>
+            </div>
         {% endif %}
+
     </body>
-</html>
+
+{% endblock %}

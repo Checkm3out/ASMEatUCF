@@ -26,7 +26,7 @@ urlpatterns = [
     path('', include('printrequest.urls')),
 
     # redirects to 'home page' from base site. permanent=False(is important!!!)
-    #path('', RedirectView.as_view(url='asme/', permanent=False)),
+    path('asme/', RedirectView.as_view(url='/', permanent=False)),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

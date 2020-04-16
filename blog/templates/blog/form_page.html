@@ -4,6 +4,8 @@
         <title>{{ page.title }}</title>
     </head>
     <body>
+
+    <a href="{% pageurl page.get_parent %}">{{page.get_parent}}</a>
         <h1>{{ page.title }}</h1>
         {{ page.intro|richtext }}
         {% if form.as_p %}

@@ -16,11 +16,13 @@ import os
 
 from django.core.mail import send_mail, EmailMessage
 
+from wagtail.core.models import Page
+
 # Create your views here.
 
 # site/asme/  'home page'
 def asme(request):
-    args = {'name': "form"}
+    args = {'name': "form", 'page1': Page.objects.all()}
     return render(request, 'printrequest/asme.html', args)
 
 

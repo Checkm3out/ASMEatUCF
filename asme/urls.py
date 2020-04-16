@@ -23,10 +23,10 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('asme1/', include('printrequest.urls')),
+    path('', include('printrequest.urls')),
 
     # redirects to 'home page' from base site. permanent=False(is important!!!)
-    path('', RedirectView.as_view(url='asme/', permanent=False)),
+    #path('', RedirectView.as_view(url='asme/', permanent=False)),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
@@ -36,10 +36,13 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
+from wagtail.contrib.sitemaps.views import sitemap
+
 urlpatterns += [
 
     path('cms/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
+    path('sitemap.xml', sitemap),
     path('asme/', include(wagtail_urls)),
 
 ]

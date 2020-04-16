@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     margin: 100px;
     flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 
@@ -28,9 +28,12 @@
 h1{
     text-align: center;
 }
+h2{
+    text-align: center;
+}
 
 p{
-    text-align: center;
+    text-align: left;
 }
 
 img{
@@ -45,4 +48,22 @@ img{
 /*idk why but this page requires modifaction*/
 .links{
     height: 100%;
+}
+
+.title{
+
+    background-color: #dab844;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: solid 4px black;
+    display: block;
+    flex-direction: column;
+    flex-basis: auto;
+    width: 75%;
+    margin: auto;
+    justify-self: center;
+
 }

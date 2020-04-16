@@ -2,7 +2,7 @@
 
 {% block head %}
 {% load static %}
-    <link href="{% static 'printrequest/css/asme.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'printrequest/css/standard.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 {% load wagtailcore_tags %}
 
@@ -10,12 +10,14 @@
 
 {% block body %}
     <body class="wsite-background">
-      <div class="container-body" id="container">
-          <div class="jumbotron">
+
+          <div class="title" >
           <h1>{{ page.title }}</h1>
                 <div class="intro">{{ page.intro|richtext }}</div>
               </div>
+          <div class="container-body" id="container">
     {% for post in page.get_children %}
+          <div class="container">
           <div class="jumbotron">
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
 
@@ -23,6 +25,15 @@
 
         {{ post.specific.body|richtext }}
 
+              {% if form.as_p %}
+        <form action="{% pageurl page %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+        {% endif %}
+
+              </div>
               </div>
     {% endfor %}
 

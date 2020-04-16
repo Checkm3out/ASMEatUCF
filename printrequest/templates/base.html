@@ -31,17 +31,12 @@
 				<div class="backdrop"></div>
 				<div class="close-btn"><i class="fas fa-times">X</i></div>
 				<ul class="links">
-
+                    <!--gets wagtail urls from context_processor.py   {{item.get_descendants}} -->
                     {% if nav_urls %}
                     {% for item in nav_urls %}
-                    {% if item.get_url %}
-                    {% if item.show_in_menus %}
-
 
                     <li><a href="{{ item.get_url }}"> {{item}} </a></li>
 
-                    {% endif %}
-                    {% endif %}
                     {% endfor %}
                     {% endif %}
 

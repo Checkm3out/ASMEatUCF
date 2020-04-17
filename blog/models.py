@@ -35,6 +35,8 @@ class BlogPage(Page):
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('html', blocks.RawHTMLBlock()),
+        ('quote', blocks.BlockQuoteBlock()),
     ])
 
     search_fields = Page.search_fields + [

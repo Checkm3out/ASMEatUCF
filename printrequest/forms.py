@@ -1,4 +1,4 @@
-from .models import PrinterFile, Colors
+from .models import PrinterFile
 from django import forms
 from phone_field import PhoneField
 
@@ -16,15 +16,15 @@ class EmailForm(forms.ModelForm):
     special_requests = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control"}))
     message = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control"}))
 
-    COLOR_CHOICES = []
-    for items in Colors.objects.all():
-        COLOR_CHOICES.append((items.name, (items.name + items.price)))
-
-    color = forms.MultipleChoiceField(
-        required=False,
-        widget=forms.Select(attrs={'class': "form-control"}),
-        choices=COLOR_CHOICES,
-    )
+    # COLOR_CHOICES = []
+    # for items in Colors.objects.all():
+    #     COLOR_CHOICES.append((items.name, (items.name + items.price)))
+    #
+    # color = forms.MultipleChoiceField(
+    #     required=False,
+    #     widget=forms.Select(attrs={'class': "form-control"}),
+    #     choices=COLOR_CHOICES,
+    # )
 
     MEMBER_CHOICES = [('NO', 'NO (Members get a discount)')]
     MEMBER_CHOICES.append(('YES','YES (Eligible for discount)'))
@@ -36,5 +36,5 @@ class EmailForm(forms.ModelForm):
 
     class Meta:
         model = PrinterFile
-        fields = ('first_name', 'last_name', 'phone_number', 'email', 'member', 'creator', 'dimensions', 'color', 'special_requests', 'message', 'document')
+        fields = ('first_name', 'last_name', 'phone_number', 'email', 'member', 'creator', 'dimensions', 'special_requests', 'message', 'document')
 

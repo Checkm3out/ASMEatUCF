@@ -8,7 +8,7 @@ from django.conf import settings
 from .forms import EmailForm
 
 # import the models we created
-from .models import PrinterFile, Colors, OfficerModel, AboutModel
+from .models import PrinterFile, OfficerModel, AboutModel
 
 import mimetypes
 

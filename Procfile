@@ -1,1 +1,1 @@
-web: gunicorn sanctuary.wsgi
+web: gunicorn asme.wsgi

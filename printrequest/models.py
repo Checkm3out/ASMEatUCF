@@ -1,5 +1,5 @@
 from django.db import models
-from phone_field import PhoneField
+#from phone_field import PhoneField
 
 #
 # class Colors(models.Model):
@@ -44,7 +44,7 @@ class AboutModel(models.Model):
 class PrinterFile(models.Model):
     first_name = models.CharField(max_length=100, default='')
     last_name = models.CharField(max_length=100, default='')
-    phone_number = PhoneField(blank=True, default='')
+    #phone_number = PhoneField(blank=True, default='')
     email = models.EmailField()
     member = models.CharField(max_length=1000, default='')
     model_name = models.CharField(max_length=1000, default='')

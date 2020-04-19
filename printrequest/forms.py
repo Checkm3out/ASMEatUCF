@@ -1,12 +1,12 @@
 from .models import PrinterFile
 from django import forms
-from phone_field import PhoneField
+#from phone_field import PhoneField
 
 
 class EmailForm(forms.ModelForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control"}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control"}))
-    phone_number = PhoneField()
+    #phone_number = PhoneField()
     email = forms.EmailField(max_length=200,
                              widget=forms.TextInput(attrs={'class': "form-control", 'id': "clientemail"}))
     #member = forms.CharField(widget=forms.Textarea(attrs={'class': "form-control", 'placeholder': "Yes or No"}))
@@ -36,5 +36,5 @@ class EmailForm(forms.ModelForm):
 
     class Meta:
         model = PrinterFile
-        fields = ('first_name', 'last_name', 'phone_number', 'email', 'member', 'creator', 'dimensions', 'special_requests', 'message', 'document')
+        fields = ('first_name', 'last_name', 'email', 'member', 'creator', 'dimensions', 'special_requests', 'message', 'document')
 

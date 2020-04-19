@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-# TODO Remove unnecessary packages
+
 # TODO Fix Images for Heroku
 # TODO Clean Up Blog Models
 # TODO Make CSS Better for BLOGS
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'printrequest',
-    'phone_field',
+
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',

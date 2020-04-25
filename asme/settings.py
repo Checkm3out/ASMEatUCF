@@ -61,32 +61,26 @@ INSTALLED_APPS = [
     'wagtail.core',
     'django.contrib.sitemaps',
 
+    # wagtail apps
     'modelcluster',
     'taggit',
     'blog',
 
+    # production server
     'gunicorn',
+
+    # aws image storage
     'storages',
 ]
 
 WAGTAIL_SITE_NAME = 'My Example Site'
-"""
-cE79o1RzW1xgsix1SmLlsKPkPETKZMBI8vZaLAvb = Secret access key
 
-
-Access key ID = AKIA4OLVCSCNFVNPF6OO
-
-user , asmeucfdev
-"""
-# cloudinary.config(
-#   cloud_name=os.environ['CLOUDINARY_CLOUD_NAME'],
-#   api_key=os.environ['CLOUDINARY_API_KEY'],
-#   api_secret=os.environ['CLOUDINARY_API_SECRET'],
-# )
-AWS_STORAGE_BUCKET_NAME = 'asmeucfstorage'
-AWS_ACCESS_KEY_ID = 'AKIA4OLVCSCNFVNPF6OO'
-AWS_SECRET_ACCESS_KEY = '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'
+# aws storage settings for uploading images through wagtail
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# prevents overwriting files by accident - delete things you wish to overwrite
 AWS_S3_FILE_OVERWRITE = False
 
 MIDDLEWARE = [

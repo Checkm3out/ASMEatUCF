@@ -157,7 +157,7 @@ body {
 /* Website background image */
 
 .wsite-background{
-	background-image: url('../../../media/static/601458852.jpg');
+	background-image: url('../../asme/601458852.jpg');
     background-repeat: no-repeat !important;
     background-position: 50.00% 16.22% !important;
     background-size: cover;

@@ -10,13 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-# TODO Fix Images for Heroku
+# TODO Fix duplication error in wagtail images
 # TODO Clean Up Blog Models
 # TODO Make CSS Better for BLOGS
 # TODO Remodel Social Icons
 
 import os
 import dj_database_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,10 +66,28 @@ INSTALLED_APPS = [
     'blog',
 
     'gunicorn',
-
+    'storages',
 ]
 
 WAGTAIL_SITE_NAME = 'My Example Site'
+"""
+cE79o1RzW1xgsix1SmLlsKPkPETKZMBI8vZaLAvb = Secret access key
+
+
+Access key ID = AKIA4OLVCSCNFVNPF6OO
+
+user , asmeucfdev
+"""
+# cloudinary.config(
+#   cloud_name=os.environ['CLOUDINARY_CLOUD_NAME'],
+#   api_key=os.environ['CLOUDINARY_API_KEY'],
+#   api_secret=os.environ['CLOUDINARY_API_SECRET'],
+# )
+AWS_STORAGE_BUCKET_NAME = 'asmeucfstorage'
+AWS_ACCESS_KEY_ID = 'AKIA4OLVCSCNFVNPF6OO'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,7 +178,10 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

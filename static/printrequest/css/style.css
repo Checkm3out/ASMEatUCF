@@ -99,7 +99,7 @@ li
 .image{
     display: flex;
     flex-direction: column;
-    background-image: url('../../../media/static/601458852.jpg');
+    background-image: url('../../asme/601458852.jpg');
     height: 387px;
     ackground-repeat: no-repeat;
     background-position: 50.00% 16.22%;

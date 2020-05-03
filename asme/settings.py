@@ -71,6 +71,12 @@ INSTALLED_APPS = [
 
     # aws image storage
     'storages',
+
+    'wagtailfontawesome',
+    'wagtail_blocks',
+
+    'wagtail.contrib.modeladmin',
+    'wagtailstreamforms',
 ]
 
 WAGTAIL_SITE_NAME = 'My Example Site'

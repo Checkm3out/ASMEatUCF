@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 {% include_block page.body %}
 
 {% block body_class %}template-blogpage{% endblock %}
@@ -15,13 +16,30 @@
 
 <body class="wsite-background">
 
-    <h1>{{ page.title }}</h1>
-    <div class="jumbotron">
+
+    <div class="container">
     <div class="intro">{{ page.intro|richtext }}</div>
+
+        <div class="carousel">
+			<div class="slides">
+                {% for item in page.gallery_images.all %}
+                <span class="slide" style="height: 250px">
+
+                    {% image item.image fill-340x250 %}
+
+                </span>
+                {% endfor %}
+
+			</div>
+
+		</div>
+
+<script src="{% static 'printrequest/js/carousel.js' %}"></script>
 
     </div>
     <div class="page-body">
             {% for block in page.body %}
+
             <div class="jumbotron">{% include_block block %}</div>
             {% endfor %}
 

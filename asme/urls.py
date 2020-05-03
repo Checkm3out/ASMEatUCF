@@ -30,6 +30,7 @@ urlpatterns = [
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
+
 from django.urls import path, include
 
 from wagtail.admin import urls as wagtailadmin_urls
@@ -38,6 +39,8 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from wagtail.contrib.sitemaps.views import sitemap
 
+
+
 urlpatterns += [
 
     path('cms/', include(wagtailadmin_urls)),
@@ -45,4 +48,7 @@ urlpatterns += [
     path('sitemap.xml', sitemap),
     path('asme/', include(wagtail_urls)),
 
+
 ]
+
+

@@ -23,6 +23,9 @@ from wagtail.core.models import Page
 # site/asme/  'home page'
 def asme(request):
     args = {'name': "form", 'page1': Page.objects.all()}
+    # if Page.objects.all():
+    #     return redirect('/asme/home/')
+    # else:
     return render(request, 'printrequest/asme.html', args)
 
 

@@ -1,0 +1,21 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+<link href="{% static 'wagtail_blocks/bootstrap.min.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+<script src="{% static 'wagtail_blocks/js/bootstrap.bundle.min.js' %}?v={{ VERSION }}"></script>
+<link href="{% static 'wagtail_blocks/thumbnail_gallery.css' %}?v={{ VERSION }}" rel="stylesheet"/>
+
+<div class="carousel">
+    <div class="slides">
+        {% for image_item in value.image_items %}
+        <div class="slide">
+            <a href="#" class="d-block mb-4 h-100">
+                <img class="slide_image" src="{{ image_item.image.file.url }}" alt="">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="{% static 'printrequest/js/carousel.js' %}"></script>

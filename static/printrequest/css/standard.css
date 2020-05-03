@@ -6,7 +6,6 @@
     flex-direction: row;
 }
 
-
 .jumbotron{
     background-color: #dab844;
     margin-right: 10px;
@@ -21,10 +20,8 @@
     width: -moz-fit-content;
 
 
-
-
-
 }
+
 h1{
     text-align: center;
 }
@@ -38,9 +35,26 @@ p{
 }
 
 img{
+    /*breaks the image slider but fixed in image_slider_custom.css*/
     max-width:100%;
     height:auto;
 }
+
+h1{
+    color: white;
+}
+
+.page-body > ul{
+    color: white;
+    padding: 40px;
+    list-style-type: circle;
+}
+
+.page-body > ul > li{
+    padding: 10px;
+}
+
+
 
 .hidden{
     display: none;
@@ -66,5 +80,41 @@ img{
     width: 75%;
     margin: auto;
     justify-self: center;
+
+}
+
+
+/*image carousel*/
+.carousel {
+	width: auto;
+    max-width: 340px;
+	height: 250px;
+    margin: 40px;
+
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.slides {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	display: flex;
+	width: 100%;
+	transition: 1s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+	min-height: 250px;
+	height: auto;
+    max-width: 340px;
+    max-height: 300px;
+}
+.slide_image{
+    min-width: 100%;
+    max-width: 340px;
+    max-height: 250px;
 
 }

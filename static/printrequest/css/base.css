@@ -32,12 +32,12 @@ body {
 	padding: 10px 30px;
 	box-sizing: border-box;
 }
-.icon,
-.close-btn {
+.icon, .close-btn {
 	display: none;
 	font-size: 1.2em;
 	cursor: pointer;
 }
+
 .links {
 	display: flex;
 	list-style: none;
@@ -64,6 +64,7 @@ body {
 	left: 0;
 	background: rgba(0, 0, 0, 0);
 	cursor: pointer;
+	justify-content: space-evenly;
 }
 @keyframes fadeIn {
 	to {
@@ -74,22 +75,26 @@ body {
 @media (max-width: 675px) {
 
 	body {
-	background: #3e3e3e;
-	min-height: 100vh;
-	font-family: "Roboto";
-	overflow-x: hidden;
-	box-sizing: border-box;
-	width: 100%;
+		background: #3e3e3e;
+		min-height: 100vh;
+		font-family: "Roboto";
+		overflow-x: hidden;
 
-	height: 100%;
+		box-sizing: border-box;
+		width: 100%;
+
+		height: 100%;
 
 }
 
-	.icon,
+	.links-wrapper > ul {
+		display: none;
+	}
 	.close-btn {
-		display: block;
+		display: none;
 	}
 	.icon {
+		display: block;
 		position: absolute;
 
 
@@ -139,10 +144,15 @@ body {
 		right: 0;
 	}
 	.open .close-btn {
+		display: block;
 		right: 32px;
 	}
 	.open .backdrop {
 		display: block;
+	}
+
+	.open > ul {
+		display: flex;
 	}
 
 

@@ -118,3 +118,13 @@ h1{
     max-height: 250px;
 
 }
+
+
+@media (max-width: 650px) {
+    .page-body {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}

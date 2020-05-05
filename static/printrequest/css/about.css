@@ -98,9 +98,9 @@
     border-radius: 99999px;
     width: 200px;
     height: 200px;
-    background-image: url('../../../media/static/carousel/2.jpg');
+    background-image: url('/../static/asme/asme-logo.jpg');
     background-size: cover;
-    border: solid 2px red;
+    border: solid 2px black;
 
     margin: 10px 0px;
     text-align: center;
@@ -108,7 +108,7 @@
 }
 
 .officer-title{
-    color: red;
+    color: rgb(141, 36, 36);
     font-style: italic;
 
     padding: 10px 0px;

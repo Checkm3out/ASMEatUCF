@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-# TODO Fix duplication error in wagtail images
+
 # TODO Clean Up Blog Models
 # TODO Make CSS Better for BLOGS
 # TODO Remodel Social Icons
